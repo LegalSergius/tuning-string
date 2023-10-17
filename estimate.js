@@ -44,6 +44,10 @@ function estimate() {
         0.100100467912485, 0.106461762781915, 0.112672075238037, 0.118700330692457, 0.123459799343456, 0.12995642991769, 0.135613749610385, 0.140756592358395, 0.145640732592793,
         0.150265071038872, 0.154632361836925, 0.158748403128501, 0.162621336355577, 0.16626097025529, 0.169678157950242]
 
+    const resultTable = document.getElementById('resultTable');
+    document.getElementById('resultContainer').classList.remove('d-none');
+    resultTable.innerHTML = '';
+        
 
     let startDepth = 0;
     const depthSummand = (H5 - startDepth) / 29;
@@ -144,9 +148,6 @@ function estimate() {
         psiaValues.push(psiaPressure);
         mPaValues.push(mPaPressure);
     }
-
-    const resultTable = document.getElementById('resultTable');
-    document.getElementById('resultContainer').classList.toggle('d-none');
 
     for (let index = 0; index < depthFoots.length; index++) {
         const newRow = document.createElement('tr');
